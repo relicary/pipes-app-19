@@ -121,15 +121,17 @@
 
 <div class="flex flex-row gap-2">
   <h1 class="text-2xl font-bold">Locale Actual:
-    <span class="badge badge-secondary">ES</span>
+    <span class="badge badge-secondary">
+      {{ currentLocale() }}
+    </span>
   </h1>
-  <button class="btn btn-primary">
+  <button (click)="changeLocal('de')" class="btn btn-primary">
     To DE
   </button>
-  <button class="btn btn-primary">
+  <button (click)="changeLocal('en')" class="btn btn-primary">
     To EN
   </button>
-  <button class="btn btn-primary">
+  <button (click)="changeLocal('es')" class="btn btn-primary">
     To ES
   </button>
 </div>
