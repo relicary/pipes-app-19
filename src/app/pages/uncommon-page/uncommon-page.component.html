@@ -14,4 +14,13 @@
 
   </app-card>
 
+  <app-card title="i18nPluralPipe">
+    <p>Currently, {{ customers().length | i18nPlural: customersMap() }}</p>
+
+    <button class="btn btn-primary" (click)="deleteCustomer()" [disabled]="customers().length === 0">
+      Delete Customer
+    </button>
+
+  </app-card>
+
 </section>
