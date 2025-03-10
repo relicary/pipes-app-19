@@ -23,4 +23,32 @@
 
   </app-card>
 
+  <app-card title="SlicePipe">
+    <b>Original</b>
+    <p class="text-primary">
+      {{ customers().join(', ') }}
+    </p>
+
+    <b class="mt-2">Slice:0:2</b>
+    <p class="text-primary">
+      {{ customers() | slice:0:2 }}
+    </p>
+
+    <b class="mt-2">Slice:1:2</b>
+    <p class="text-primary">
+      {{ customers() | slice: 1 : 2 }}
+    </p>
+
+    <b class="mt-2">Slice:4:8</b>
+    <p class="text-primary">
+      {{ customers() | slice: 4 : 8 }}
+    </p>
+
+    <b class="mt-2">Slice:0:-3</b>
+    <p class="text-primary">
+      {{ customers() | slice: 0 : -3 }}
+    </p>
+
+  </app-card>
+
 </section>
