@@ -51,4 +51,18 @@
 
   </app-card>
 
+  <app-card title="JsonPipe">
+    <pre class="text-primary">
+      {{ customers() | json }}
+    </pre>
+    <pre class="text-primary">
+      {{ customer() | json}}
+    </pre>
+    <p class="text-primary">
+      {{ customers().join(', ') | json | uppercase }}
+    </p>
+
+
+  </app-card>
+
 </section>
