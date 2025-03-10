@@ -1,3 +1,10 @@
 {
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "externalTemplate": true,
+            "inlineStyle": true,
+            "skipStyle": true
+        }
+    }
 }
