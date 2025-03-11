@@ -78,4 +78,20 @@
         </ul>
   </app-card>
 
+  <app-card title="AsyncPipe">
+    <p>
+      {{ promiseValue | async }}
+    </p>
+    @if ( promiseValue | async; as value) {
+      <p class="text-primary">
+        {{ value }}
+      </p>
+    }
+    @else {
+      <p class="text-accent">
+        Wait please...
+      </p>
+    }
+  </app-card>
+
 </section>
