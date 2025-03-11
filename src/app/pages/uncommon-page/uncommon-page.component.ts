@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CardComponent } from "../../components/card/card.component";
 import { AsyncPipe, I18nPluralPipe, I18nSelectPipe, JsonPipe, KeyValuePipe, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { interval, map, tap } from 'rxjs';
 
 const customer1 = {
   name: 'Relicary',
@@ -77,5 +78,10 @@ export default class UncommonPageComponent {
       console.log('Promise finished');
     }, 3500);
   });
+
+  myObservableTimer = interval(2000).pipe(
+    map( (value) => value + 1),
+    tap( (value) => console.log('tap: ', value))
+  );
 
 }
