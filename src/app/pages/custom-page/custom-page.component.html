@@ -7,13 +7,13 @@
   <div class="stat">
     <div class="stat-title">ToggleCase Pipe</div>
     <div class="stat-value">
-      {{ name() | toggleCase: false }}
-    </div>
-    <div class="stat-value">
-      {{ name() | toggleCase: true }}
+      {{ name() | toggleCase: upperCase() }}
     </div>
     <div class="stat-desc">
       {{ name() }}
     </div>
+    <button (click)="upperCase.set(!upperCase());" class="btn btn-primary mt-2">
+      ToggleCase
+    </button>
   </div>
 </div>

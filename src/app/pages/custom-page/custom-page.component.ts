@@ -7,5 +7,8 @@ import { ToggleCasePipe } from '../../pipes/toggle-case.pipe';
   templateUrl: './custom-page.component.html',
 })
 export default class CustomPageComponent {
-  name = signal('Relicary Vlc')
+  name = signal('Relicary Vlc');
+
+  upperCase = signal(true);
+
 }
